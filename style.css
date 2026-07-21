@@ -756,20 +756,57 @@ ul {
   box-shadow: 0 0 15px rgba(224, 159, 0, 0.6);
 }
 
+/* Responsive Breakpoints for Full Screen Banner Slider (#banner-fullscreen) */
+@media (max-width: 1199px) {
+  .fs-slide-title { font-size: 3.2rem; }
+  .fs-slide-subtitle { font-size: 1.15rem; }
+}
+
 @media (max-width: 991px) {
-  .fs-slides-container { min-height: 650px; }
-  .fs-slide-title { font-size: 2.8rem; }
-  .fs-slide-subtitle { font-size: 1.1rem; }
+  .fullscreen-slider-section,
+  .fs-slides-container { min-height: 640px; height: auto; }
+  .fs-slide .row { padding-top: 100px !important; padding-bottom: 80px !important; min-height: 640px !important; }
+  .fs-slide-title { font-size: 2.6rem; }
+  .fs-slide-subtitle { font-size: 1.05rem; max-width: 100%; }
   .fs-arrow { width: 44px; height: 44px; font-size: 1.2rem; }
   .fs-arrow-prev { left: 12px; }
   .fs-arrow-next { right: 12px; }
 }
 
 @media (max-width: 767px) {
-  .fs-slide-title { font-size: 2.2rem; }
-  .fs-slide-subtitle { font-size: 0.98rem; }
-  .fs-arrow { display: none; }
-  .fs-dots { bottom: 25px; }
+  .fullscreen-slider-section,
+  .fs-slides-container { min-height: calc(100vh - 20px); height: auto; }
+  .fs-slide .row { padding-top: 95px !important; padding-bottom: 95px !important; min-height: calc(100vh - 20px) !important; }
+  .fs-slide-title { font-size: 2.05rem !important; line-height: 1.25 !important; }
+  .fs-slide-subtitle { font-size: 0.95rem !important; line-height: 1.55 !important; margin-bottom: 1.5rem !important; }
+  .fs-slide .badge-amber { font-size: 0.82rem !important; padding: 6px 14px !important; margin-bottom: 1rem !important; }
+  
+  /* Stack buttons neatly on mobile for easy thumb tapping */
+  .fs-slide .d-flex.flex-wrap.gap-3:not(.border-top) {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 12px !important;
+  }
+  .fs-slide .btn-amber,
+  .fs-slide .btn-cyan-outline {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 13px 20px !important;
+    font-size: 0.95rem !important;
+  }
+  
+  /* Compact highlight pills on mobile */
+  .fs-highlight-pill { font-size: 0.78rem !important; padding: 5px 12px !important; }
+  .fs-arrow { display: none !important; }
+  .fs-dots { bottom: 20px; }
+}
+
+@media (max-width: 480px) {
+  .fs-slide-title { font-size: 1.7rem !important; }
+  .fs-slide-subtitle { font-size: 0.88rem !important; }
+  .fs-slide .badge-amber { font-size: 0.75rem !important; padding: 5px 12px !important; }
+  .fs-highlight-pill { font-size: 0.74rem !important; padding: 4px 10px !important; }
 }
 
 /* ==========================================================================

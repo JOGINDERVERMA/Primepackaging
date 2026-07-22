@@ -111,21 +111,24 @@ ul {
 }
 
 .text-gradient-amber {
-  background: linear-gradient(135deg, #e09f00 0%, #c48900 50%, #926400 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #e09f00 !important;
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  -webkit-text-fill-color: #e09f00 !important;
 }
 
 .text-gradient-navy {
-  background: linear-gradient(135deg, #082148 0%, #113469 50%, #1b498f 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #082148 !important;
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  -webkit-text-fill-color: #082148 !important;
 }
 
 .text-gradient-cyan {
-  background: linear-gradient(135deg, #082148 0%, #113469 50%, #1b498f 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #0284c7 !important;
+  background: none !important;
+  -webkit-background-clip: border-box !important;
+  -webkit-text-fill-color: #0284c7 !important;
 }
 
 .badge-amber {
@@ -176,7 +179,7 @@ ul {
 
 /* Glowing & Solid Buttons */
 .btn-amber {
-  background: linear-gradient(135deg, #e09f00 0%, #c48900 100%);
+  background: #e09f00;
   color: #ffffff !important;
   font-weight: 700;
   padding: 14px 28px;
@@ -191,14 +194,14 @@ ul {
 }
 
 .btn-amber:hover {
-  background: linear-gradient(135deg, #f5b014 0%, #e09f00 100%);
+  background: #c48900;
   box-shadow: 0 12px 32px rgba(224, 159, 0, 0.5);
   transform: translateY(-2px);
   color: #ffffff !important;
 }
 
 .btn-navy {
-  background: linear-gradient(135deg, var(--navy-blue) 0%, var(--navy-dark) 100%);
+  background: var(--navy-dark);
   color: #ffffff !important;
   font-weight: 700;
   padding: 14px 28px;
@@ -213,7 +216,7 @@ ul {
 }
 
 .btn-navy:hover {
-  background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy-blue) 100%);
+  background: var(--navy-blue);
   box-shadow: 0 12px 32px rgba(8, 33, 72, 0.45);
   transform: translateY(-2px);
   color: #ffffff !important;
@@ -587,8 +590,7 @@ ul {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, rgba(8, 33, 72, 0.88) 0%, rgba(8, 33, 72, 0.7) 55%, rgba(8, 33, 72, 0.25) 100%),
-              linear-gradient(180deg, rgba(8, 33, 72, 0.35) 0%, transparent 40%, rgba(8, 33, 72, 0.65) 100%);
+  background: rgba(8, 33, 72, 0.72);
   z-index: 2;
 }
 
@@ -634,10 +636,11 @@ ul {
   display: inline-flex !important;
   align-items: center !important;
   gap: 8px !important;
+  text-transform: capitalize !important;
 }
 
 .fs-slide .btn-amber {
-  background: linear-gradient(135deg, #ffc107 0%, #e09f00 100%) !important;
+  background: #ffc107 !important;
   color: #082148 !important; /* Royal Navy text on bright gold button for maximum legibility */
   font-weight: 800 !important;
   font-size: 1.05rem !important;
@@ -648,7 +651,7 @@ ul {
 }
 
 .fs-slide .btn-amber:hover {
-  background: linear-gradient(135deg, #ffdb6d 0%, #ffc107 100%) !important;
+  background: #e09f00 !important;
   color: #082148 !important;
   transform: translateY(-3px) !important;
   box-shadow: 0 12px 32px rgba(255, 193, 7, 0.65) !important;
@@ -772,10 +775,15 @@ ul {
 
 /* Responsive Breakpoints & Fluid Viewport Scaling for Full Screen Banner Slider (#banner-fullscreen) */
 @media (max-width: 1199px) {
-  .fs-slide-title { font-size: clamp(2.4rem, 4.2vw, 3.2rem); line-height: 1.18; }
-  .fs-slide-subtitle { font-size: clamp(1rem, 1.8vw, 1.15rem); line-height: 1.6; }
+  .fs-slide-title { font-size: clamp(2.2rem, 4vw, 3.1rem) !important; line-height: 1.18 !important; }
+  .fs-slide-subtitle { font-size: clamp(0.98rem, 1.7vw, 1.15rem) !important; line-height: 1.55 !important; }
+  .fs-slide .row {
+    padding-top: clamp(80px, 10vh, 95px) !important;
+    padding-bottom: clamp(65px, 8vh, 85px) !important;
+  }
 }
 
+/* 📱 Tablet & iPad Viewport Master Fit (`768px` to `991px`) */
 @media (max-width: 991px) {
   .fullscreen-slider-section,
   .fs-slides-container,
@@ -786,41 +794,52 @@ ul {
     height: auto !important;
   }
   .fs-slide .row {
-    padding-top: clamp(85px, 12vh, 110px) !important;
-    padding-bottom: clamp(70px, 10vh, 95px) !important;
+    padding-top: clamp(72px, 9.5vh, 90px) !important;
+    padding-bottom: clamp(55px, 7.5vh, 75px) !important;
   }
   .fs-slide-title { 
-    font-size: clamp(2rem, 5.2vw, 2.65rem) !important; 
+    font-size: clamp(1.8rem, 4.5vw, 2.45rem) !important; 
     line-height: 1.2 !important; 
-    margin-bottom: clamp(0.8rem, 2vw, 1.3rem) !important; 
+    margin-bottom: clamp(0.6rem, 1.8vh, 1rem) !important; 
   }
   .fs-slide-subtitle { 
-    font-size: clamp(0.95rem, 2.2vw, 1.1rem) !important; 
-    line-height: 1.58 !important; 
+    font-size: clamp(0.92rem, 2.1vw, 1.05rem) !important; 
+    line-height: 1.54 !important; 
     max-width: 100% !important; 
-    margin-bottom: clamp(1.2rem, 3vw, 1.8rem) !important; 
+    margin-bottom: clamp(1rem, 2.5vh, 1.4rem) !important; 
   }
   .fs-slide .badge-amber { 
-    font-size: clamp(0.78rem, 1.8vw, 0.92rem) !important; 
-    padding: clamp(6px, 1.2vw, 8px) clamp(12px, 2.5vw, 18px) !important; 
-    margin-bottom: clamp(0.75rem, 2vw, 1rem) !important; 
+    font-size: clamp(0.76rem, 1.8vw, 0.88rem) !important; 
+    padding: clamp(5px, 1vh, 7px) clamp(12px, 2.2vw, 16px) !important; 
+    margin-bottom: clamp(0.6rem, 1.5vh, 0.9rem) !important; 
   }
-  .fs-arrow { width: 44px; height: 44px; font-size: 1.2rem; }
-  .fs-arrow-prev { left: 12px; }
-  .fs-arrow-next { right: 12px; }
+  .fs-slide .d-flex.flex-wrap.gap-3:not(.border-top) {
+    gap: clamp(10px, 2vw, 14px) !important;
+  }
+  .fs-slide .btn-amber,
+  .fs-slide .btn-cyan-outline {
+    padding: clamp(11px, 2vh, 14px) clamp(20px, 3vw, 26px) !important;
+    font-size: clamp(0.92rem, 2vw, 1rem) !important;
+  }
+  .fs-arrow { width: 42px; height: 42px; font-size: 1.15rem; }
+  .fs-arrow-prev { left: 10px; }
+  .fs-arrow-next { right: 10px; }
   
-  /* Pad device highlights viewport adjustment */
+  /* Pad device highlights fitting */
   .fs-slide .border-top {
-    margin-top: clamp(1.2rem, 3vw, 1.8rem) !important;
-    padding-top: clamp(1rem, 2.5vw, 1.3rem) !important;
-    gap: clamp(8px, 1.8vw, 14px) !important;
+    margin-top: clamp(1rem, 2.5vh, 1.4rem) !important;
+    padding-top: clamp(0.8rem, 2vh, 1.1rem) !important;
+    gap: clamp(8px, 1.8vw, 12px) !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
   }
   .fs-highlight-pill {
-    font-size: clamp(0.78rem, 1.6vw, 0.88rem) !important;
-    padding: clamp(5px, 1vw, 7px) clamp(10px, 2vw, 15px) !important;
+    font-size: clamp(0.76rem, 1.6vw, 0.85rem) !important;
+    padding: clamp(5px, 1vh, 6px) clamp(10px, 2vw, 14px) !important;
   }
 }
 
+/* 📱 Mobile & Small Tablet Viewport Master Fit (`max-width: 767px`) */
 @media (max-width: 767px) {
   .fullscreen-slider-section,
   .fs-slides-container,
@@ -830,64 +849,96 @@ ul {
     min-height: 100dvh !important;
     height: auto !important;
   }
+  /* Precise top and bottom padding so navigation is cleared and bottom controls/dots fit without scrolling */
   .fs-slide .row {
-    padding-top: clamp(80px, 14vh, 95px) !important;
-    padding-bottom: clamp(75px, 13vh, 95px) !important;
+    padding-top: clamp(68px, 9vh, 82px) !important;
+    padding-bottom: clamp(45px, 6vh, 62px) !important;
   }
   .fs-slide-title { 
-    font-size: clamp(1.68rem, 6.8vw, 2.15rem) !important; 
-    line-height: 1.24 !important; 
-    margin-bottom: clamp(0.75rem, 2.5vw, 1rem) !important; 
+    font-size: clamp(1.48rem, 5.8vw, 1.85rem) !important; 
+    line-height: 1.22 !important; 
+    margin-bottom: clamp(0.5rem, 1.5vh, 0.8rem) !important; 
   }
   .fs-slide-subtitle { 
-    font-size: clamp(0.88rem, 3.5vw, 0.98rem) !important; 
-    line-height: 1.54 !important; 
-    margin-bottom: clamp(1.1rem, 4vw, 1.5rem) !important; 
+    font-size: clamp(0.83rem, 3.2vw, 0.92rem) !important; 
+    line-height: 1.48 !important; 
+    margin-bottom: clamp(0.8rem, 2.2vh, 1.1rem) !important; 
   }
   .fs-slide .badge-amber { 
-    font-size: clamp(0.74rem, 3vw, 0.84rem) !important; 
-    padding: clamp(5px, 1.5vw, 7px) clamp(10px, 3vw, 14px) !important; 
-    margin-bottom: clamp(0.7rem, 2.5vw, 1rem) !important; 
+    font-size: clamp(0.72rem, 2.8vw, 0.82rem) !important; 
+    padding: clamp(4px, 1vh, 6px) clamp(10px, 2.8vw, 14px) !important; 
+    margin-bottom: clamp(0.5rem, 1.5vh, 0.75rem) !important; 
   }
   
-  /* Stack buttons neatly on mobile for easy thumb tapping with fluid padding */
+  /* Buttons arranged cleanly for thumb access without taking up huge vertical height */
   .fs-slide .d-flex.flex-wrap.gap-3:not(.border-top) {
-    flex-direction: column !important;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
     width: 100% !important;
-    gap: clamp(10px, 2.5vw, 13px) !important;
+    gap: clamp(8px, 2vw, 12px) !important;
   }
   .fs-slide .btn-amber,
   .fs-slide .btn-cyan-outline {
-    width: 100% !important;
+    flex: 1 1 calc(50% - 8px) !important;
+    min-width: 140px !important;
     justify-content: center !important;
     text-align: center !important;
-    padding: clamp(12px, 3vw, 15px) clamp(16px, 4vw, 22px) !important;
-    font-size: clamp(0.9rem, 3.5vw, 0.98rem) !important;
+    padding: clamp(10px, 1.8vh, 13px) clamp(12px, 3vw, 18px) !important;
+    font-size: clamp(0.84rem, 3.2vw, 0.92rem) !important;
   }
   
-  /* Highlights list stacked on mobile for full legibility */
+  /* Highlights list wraps in compact horizontal tags so it never forces vertical scrolling */
   .fs-slide .border-top {
-    margin-top: clamp(1.1rem, 3.5vw, 1.5rem) !important;
-    padding-top: clamp(0.9rem, 3vw, 1.2rem) !important;
+    margin-top: clamp(0.8rem, 2vh, 1.2rem) !important;
+    padding-top: clamp(0.7rem, 1.8vh, 1rem) !important;
     display: flex !important;
-    flex-direction: column !important;
-    align-items: stretch !important;
-    gap: clamp(8px, 2.2vw, 11px) !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-start !important;
+    gap: clamp(6px, 1.8vw, 9px) !important;
   }
   .fs-highlight-pill {
-    width: 100% !important;
+    width: auto !important;
     justify-content: flex-start !important;
-    font-size: clamp(0.76rem, 3.2vw, 0.85rem) !important;
-    padding: clamp(6px, 2vw, 8px) clamp(12px, 3.5vw, 15px) !important;
+    font-size: clamp(0.72rem, 2.8vw, 0.8rem) !important;
+    padding: clamp(4px, 1vh, 6px) clamp(10px, 2.5vw, 13px) !important;
   }
   .fs-arrow { display: none !important; }
-  .fs-dots { bottom: clamp(15px, 4vh, 22px) !important; }
+  .fs-dots { bottom: clamp(12px, 2.5vh, 18px) !important; }
 }
 
+/* 📱 Small Mobile & Compact Phones (`max-width: 480px`) */
 @media (max-width: 480px) {
-  .fs-dots { bottom: 14px !important; }
-  .fs-dot { width: 9px !important; height: 9px !important; }
-  .fs-dot.active { width: 26px !important; }
+  .fs-slide .row {
+    padding-top: 65px !important;
+    padding-bottom: 40px !important;
+  }
+  .fs-slide-title { font-size: clamp(1.35rem, 5.5vw, 1.58rem) !important; }
+  .fs-slide-subtitle { font-size: clamp(0.78rem, 3.2vw, 0.86rem) !important; margin-bottom: 12px !important; }
+  .fs-slide .btn-amber,
+  .fs-slide .btn-cyan-outline {
+    flex: 1 1 100% !important;
+    padding: 10px 14px !important;
+  }
+  .fs-dots { bottom: 10px !important; }
+  .fs-dot { width: 8px !important; height: 8px !important; }
+  .fs-dot.active { width: 22px !important; }
+}
+
+/* 📐 Landscape Mobile & Ultra-Short Screen Protection (`max-height: 650px`) */
+@media (max-height: 650px) and (max-width: 991px) {
+  .fs-slide .row {
+    padding-top: 60px !important;
+    padding-bottom: 35px !important;
+  }
+  .fs-slide .badge-amber { margin-bottom: 6px !important; padding: 3px 10px !important; }
+  .fs-slide-title { font-size: clamp(1.25rem, 5vh, 1.65rem) !important; margin-bottom: 6px !important; }
+  .fs-slide-subtitle { font-size: clamp(0.78rem, 2.8vh, 0.88rem) !important; margin-bottom: 10px !important; line-height: 1.38 !important; }
+  .fs-slide .btn-amber, .fs-slide .btn-cyan-outline { padding: 8px 14px !important; font-size: 0.82rem !important; }
+  .fs-slide .border-top { margin-top: 8px !important; padding-top: 8px !important; gap: 6px !important; }
+  .fs-highlight-pill { padding: 3px 8px !important; font-size: 0.7rem !important; }
+  .fs-dots { bottom: 6px !important; }
 }
 
 /* ==========================================================================
@@ -898,9 +949,7 @@ ul {
   min-height: 100vh;
   padding-top: 115px;
   padding-bottom: 50px;
-  background: radial-gradient(circle at 15% 40%, rgba(8, 33, 72, 0.07) 0%, transparent 60%),
-              radial-gradient(circle at 85% 30%, rgba(224, 159, 0, 0.08) 0%, transparent 60%),
-              linear-gradient(180deg, #ffffff 0%, #f1f5f9 100%);
+  background: #f8fafc;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -1232,7 +1281,7 @@ ul {
    3. Trust Statistics Bar
    ========================================================================== */
 .stats-bar-section {
-  background: linear-gradient(180deg, #f1f5f9 0%, #e2e8f0 100%);
+  background: #f1f5f9;
   border-top: 1px solid rgba(8, 33, 72, 0.09);
   border-bottom: 1px solid rgba(8, 33, 72, 0.09);
   padding: 70px 0;
@@ -1325,7 +1374,7 @@ ul {
   position: absolute;
   bottom: 18px;
   right: 18px;
-  background: linear-gradient(135deg, var(--navy-blue) 0%, var(--navy-dark) 100%);
+  background: var(--navy-dark);
   padding: 16px 18px;
   border-radius: var(--radius-lg);
   color: #ffffff;
@@ -1538,14 +1587,14 @@ ul {
    6. Why Choose Us (Split Layout)
    ========================================================================== */
 .why-section {
-  background: radial-gradient(circle at 20% 50%, rgba(224, 159, 0, 0.06) 0%, #ffffff 70%);
+  background: #ffffff;
 }
 
 .why-illustration-box {
   position: relative;
   border-radius: var(--radius-xl);
   padding: 40px;
-  background: linear-gradient(145deg, #f8fafc, #f1f5f9);
+  background: #f8fafc;
   border: 1px solid var(--border-color);
   box-shadow: 0 15px 35px rgba(8, 33, 72, 0.05);
   text-align: center;
@@ -1633,7 +1682,7 @@ ul {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(8, 33, 72, 0.12), #ffffff);
+  background: #f8fafc;
   border: 1.5px solid rgba(8, 33, 72, 0.25);
   display: flex;
   align-items: center;
@@ -1662,7 +1711,7 @@ ul {
    8. Manufacturing Process Timeline
    ========================================================================== */
 .process-section {
-  background: radial-gradient(circle at 80% 30%, rgba(224, 159, 0, 0.06) 0%, #f1f5f9 70%);
+  background: #f1f5f9;
 }
 
 /* Clean Responsive Multi-Column Process Grid (Zero Horizontal Scroll) */
@@ -1772,33 +1821,39 @@ ul {
 
 .infra-overlay {
   position: absolute;
-  top: 0;
+  top: auto;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(0deg, rgba(8, 33, 72, 0.94) 0%, rgba(8, 33, 72, 0.35) 60%, rgba(0,0,0,0) 100%);
+  height: auto;
+  background: rgba(8, 33, 72, 0.94);
+  border-top: 2px solid rgba(224, 159, 0, 0.5);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  padding: 30px;
+  padding: 18px 22px;
   transition: var(--transition);
+  z-index: 2;
 }
 
 .infra-card:hover .infra-overlay {
-  background: linear-gradient(0deg, rgba(8, 33, 72, 0.98) 0%, rgba(224, 159, 0, 0.5) 60%, rgba(0,0,0,0) 100%);
+  background: #082148;
+  border-top-color: var(--primary);
 }
 
 .infra-overlay h4 {
-  font-size: 1.4rem;
-  margin-bottom: 6px;
+  font-size: 1.3rem;
+  margin-bottom: 4px;
   color: #ffffff !important;
+  font-weight: 700;
   transition: var(--transition);
 }
 
 .infra-overlay p {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: #e2e8f0;
-  margin-bottom: 12px;
+  margin-bottom: 0;
+  line-height: 1.4;
   transition: var(--transition);
 }
 
@@ -1829,7 +1884,7 @@ ul {
    10. Quality Assurance Section
    ========================================================================== */
 .quality-section {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  background: #f8fafc;
   position: relative;
   overflow: hidden;
   border-top: 1px solid var(--border-color);
@@ -1953,7 +2008,7 @@ ul {
 
 .preview-bag-box {
   position: relative;
-  background: radial-gradient(circle at center, #ffffff 0%, #f8fafc 100%);
+  background: #ffffff;
   border: 2px dashed rgba(224, 159, 0, 0.5);
   border-radius: var(--radius-lg);
   padding: 40px;
@@ -2150,7 +2205,7 @@ ul {
   left: 0;
   width: 100%;
   padding: 20px;
-  background: linear-gradient(0deg, rgba(8, 33, 72, 0.95) 0%, rgba(0,0,0,0) 100%);
+  background: rgba(8, 33, 72, 0.88);
   opacity: 0;
   transition: var(--transition);
 }
@@ -2177,7 +2232,8 @@ ul {
 .video-tour-section {
   position: relative;
   padding: 140px 0;
-  background: linear-gradient(rgba(8, 33, 72, 0.78), rgba(8, 33, 72, 0.88)), url('assets/images/factory_exterior.jpg') center/cover fixed no-repeat;
+  background: rgba(8, 33, 72, 0.82) url('assets/images/factory_exterior.jpg') center/cover fixed no-repeat;
+  background-blend-mode: overlay;
   text-align: center;
 }
 
@@ -2612,7 +2668,8 @@ ul {
    21. Final CTA Banner
    ========================================================================== */
 .cta-banner-section {
-  background: linear-gradient(135deg, rgba(8, 33, 72, 0.94) 0%, rgba(4, 20, 45, 0.98) 100%), url('assets/images/hero_3d_bags.jpg') center/cover fixed no-repeat;
+  background: rgba(8, 33, 72, 0.94) url('assets/images/hero_3d_bags.jpg') center/cover fixed no-repeat;
+  background-blend-mode: overlay;
   padding: 90px 0;
   text-align: center;
   position: relative;
@@ -3105,19 +3162,19 @@ small, .small, .stat-label, .blog-meta, .footer-links a, .footer-desc {
 .why-choose-section,
 .about-section,
 .timeline-horizontal-section {
-  padding: 60px 0 !important;
+  padding: clamp(55px, 6.5vh, 70px) 0 !important;
 }
 
 .stats-bar-section {
-  padding: 38px 0 !important;
+  padding: clamp(34px, 4.5vh, 44px) 0 !important;
 }
 
 .cta-banner-section {
-  padding: 50px 0 !important;
+  padding: clamp(45px, 5.5vh, 56px) 0 !important;
 }
 
 .main-footer {
-  padding: 50px 0 25px 0 !important;
+  padding: clamp(45px, 5.5vh, 56px) 0 clamp(20px, 2.5vh, 28px) 0 !important;
 }
 
 .hero-slider-section {
@@ -3133,109 +3190,164 @@ small, .small, .stat-label, .blog-meta, .footer-links a, .footer-desc {
   padding: 28px !important;
 }
 
-.text-center.max-w-700.mx-auto.mb-5 {
-  margin-bottom: 35px !important;
+.text-center.max-w-700.mx-auto.mb-5,
+.section-header.mb-5 {
+  margin-bottom: clamp(24px, 3.5vh, 36px) !important;
 }
 
 .display-5.fw-bold {
-  margin-bottom: 12px !important;
+  margin-bottom: clamp(10px, 1.5vh, 14px) !important;
 }
 
 /* Compact Card Paddings */
-.product-card, .quality-card, .about-feature-card, .industry-card, .blog-card, .contact-form-card {
-  padding: 20px !important;
+.product-card, .quality-card, .about-feature-card, .industry-card, .blog-card, .contact-form-card, .infra-card {
+  padding: clamp(18px, 2.5vh, 24px) clamp(18px, 2.5vw, 24px) !important;
   border-radius: var(--radius-md) !important;
   transition: var(--transition);
 }
 
 .accordion-button-custom {
-  padding: 16px 20px !important;
-  font-size: 1rem !important;
+  padding: clamp(14px, 2vh, 18px) clamp(16px, 2.5vw, 22px) !important;
+  font-size: clamp(0.96rem, 1.8vw, 1.05rem) !important;
 }
 
 .accordion-body-custom {
-  padding: 0 20px !important;
+  padding: 0 clamp(16px, 2.5vw, 22px) !important;
 }
 
 .accordion-item-custom.active .accordion-body-custom {
-  padding: 0 20px 16px 20px !important;
+  padding: 0 clamp(16px, 2.5vw, 22px) clamp(14px, 2vh, 18px) !important;
 }
 
 ul.footer-links li {
-  margin-bottom: 10px !important;
+  margin-bottom: clamp(8px, 1.2vh, 12px) !important;
 }
 
 .footer-title {
-  margin-bottom: 16px !important;
+  margin-bottom: clamp(12px, 1.8vh, 16px) !important;
 }
 
-/* 3. Universal Fluid Viewport Typography & Spacing System (Tablet & Mobile) */
+/* 3. Universal Dual-Adaptive Viewport Fit System across All Sections (Tablet & iPad: 768px - 991px) */
 @media (max-width: 991px) {
   .section-padding,
   .video-tour-section,
   .why-choose-section,
   .about-section,
   .timeline-horizontal-section {
-    padding: clamp(45px, 7vw, 65px) 0 !important;
+    padding: clamp(42px, 5.5vh, 56px) 0 !important;
   }
+  .stats-bar-section { padding: clamp(26px, 3.8vh, 36px) 0 !important; }
+  .cta-banner-section { padding: clamp(34px, 4.5vh, 46px) 0 !important; }
+  .main-footer { padding: clamp(36px, 5vh, 48px) 0 clamp(16px, 2vh, 24px) 0 !important; }
+  
   .container {
-    padding-left: clamp(16px, 3vw, 28px) !important;
-    padding-right: clamp(16px, 3vw, 28px) !important;
+    padding-left: clamp(16px, 3vw, 26px) !important;
+    padding-right: clamp(16px, 3vw, 26px) !important;
   }
   
-  /* Viewport-managed fluid headings across Tablet & Pad */
-  h1, .display-4 { font-size: clamp(1.85rem, 3.8vw, 2.2rem) !important; line-height: 1.22 !important; }
-  h2, .display-5 { font-size: clamp(1.5rem, 3.2vw, 1.8rem) !important; line-height: 1.26 !important; }
-  h3, .display-6 { font-size: clamp(1.25rem, 2.6vw, 1.42rem) !important; line-height: 1.3 !important; }
-  h4 { font-size: clamp(1.1rem, 2.2vw, 1.22rem) !important; }
-  h5 { font-size: clamp(1rem, 1.8vw, 1.1rem) !important; }
-  .stat-number { font-size: clamp(1.35rem, 3vw, 1.6rem) !important; }
+  /* Adaptive Grid Gutters */
+  .row.g-4, .row.g-5 {
+    --bs-gutter-y: clamp(16px, 2.5vh, 24px) !important;
+    --bs-gutter-x: clamp(16px, 3vw, 24px) !important;
+  }
   
-  p, .text-muted { font-size: clamp(0.9rem, 1.6vw, 0.98rem) !important; line-height: 1.6 !important; }
+  /* Dual-scaled headings and body text across Tablet */
+  h1, .display-4 { font-size: clamp(1.8rem, 3.8vw, 2.15rem) !important; line-height: 1.22 !important; margin-bottom: clamp(10px, 1.5vh, 14px) !important; }
+  h2, .display-5 { font-size: clamp(1.48rem, 3.2vw, 1.78rem) !important; line-height: 1.26 !important; margin-bottom: clamp(8px, 1.2vh, 12px) !important; }
+  h3, .display-6 { font-size: clamp(1.22rem, 2.6vw, 1.4rem) !important; line-height: 1.3 !important; margin-bottom: clamp(8px, 1.2vh, 12px) !important; }
+  h4 { font-size: clamp(1.08rem, 2.2vw, 1.2rem) !important; margin-bottom: clamp(6px, 1vh, 10px) !important; }
+  h5 { font-size: clamp(0.98rem, 1.8vw, 1.08rem) !important; margin-bottom: clamp(6px, 1vh, 8px) !important; }
+  .stat-number { font-size: clamp(1.35rem, 3.2vw, 1.6rem) !important; }
+  .stat-label { font-size: clamp(0.78rem, 1.6vw, 0.88rem) !important; }
+  
+  p, .text-muted { font-size: clamp(0.88rem, 1.6vw, 0.96rem) !important; line-height: 1.58 !important; margin-bottom: clamp(8px, 1.2vh, 12px) !important; }
+  
+  .product-card, .quality-card, .about-feature-card, .industry-card, .blog-card, .contact-form-card, .infra-card {
+    padding: clamp(16px, 2.2vh, 20px) clamp(16px, 2.5vw, 20px) !important;
+  }
 }
 
+/* 3. Universal Dual-Adaptive Viewport Fit System across All Sections (Mobile & Small Tablets: max-width: 767px) */
 @media (max-width: 767px) {
   .section-padding,
   .video-tour-section,
   .why-choose-section,
   .about-section,
   .timeline-horizontal-section {
-    padding: clamp(35px, 8vw, 50px) 0 !important;
+    padding: clamp(32px, 5vh, 46px) 0 !important;
   }
-  .stats-bar-section { padding: clamp(24px, 6vw, 32px) 0 !important; }
-  .cta-banner-section { padding: clamp(30px, 7vw, 42px) 0 !important; }
-  .text-center.max-w-700.mx-auto.mb-5 { margin-bottom: clamp(20px, 5vw, 30px) !important; }
+  .stats-bar-section { padding: clamp(22px, 3.5vh, 30px) 0 !important; }
+  .cta-banner-section { padding: clamp(28px, 4.5vh, 38px) 0 !important; }
+  .main-footer { padding: clamp(30px, 4.5vh, 42px) 0 clamp(14px, 2vh, 20px) 0 !important; }
+  .text-center.max-w-700.mx-auto.mb-5,
+  .section-header.mb-5 { margin-bottom: clamp(18px, 3vh, 26px) !important; }
   
   .container {
     padding-left: clamp(14px, 4vw, 20px) !important;
     padding-right: clamp(14px, 4vw, 20px) !important;
   }
   
-  /* Viewport-managed fluid headings across all Mobile screens */
-  h1, .display-4 { font-size: clamp(1.6rem, 7vw, 1.95rem) !important; line-height: 1.24 !important; }
-  h2, .display-5 { font-size: clamp(1.38rem, 6vw, 1.62rem) !important; line-height: 1.28 !important; }
-  h3, .display-6 { font-size: clamp(1.18rem, 5vw, 1.35rem) !important; line-height: 1.32 !important; }
-  h4 { font-size: clamp(1.05rem, 4.4vw, 1.16rem) !important; }
-  h5 { font-size: clamp(0.96rem, 4vw, 1.05rem) !important; }
-  .stat-number { font-size: clamp(1.25rem, 5.5vw, 1.45rem) !important; }
+  /* Adaptive Grid Gutters so cards never create massive empty vertical voids */
+  .row.g-4, .row.g-5 {
+    --bs-gutter-y: clamp(14px, 2.2vh, 18px) !important;
+    --bs-gutter-x: clamp(14px, 3.5vw, 18px) !important;
+  }
   
-  p, .text-muted { font-size: clamp(0.85rem, 3.6vw, 0.92rem) !important; line-height: 1.58 !important; }
+  /* Dual-scaled headings across all Mobile viewports */
+  h1, .display-4 { font-size: clamp(1.52rem, 6.5vw, 1.88rem) !important; line-height: 1.24 !important; margin-bottom: clamp(8px, 1.2vh, 12px) !important; }
+  h2, .display-5 { font-size: clamp(1.32rem, 5.8vw, 1.6rem) !important; line-height: 1.28 !important; margin-bottom: clamp(8px, 1.2vh, 12px) !important; }
+  h3, .display-6 { font-size: clamp(1.15rem, 4.8vw, 1.32rem) !important; line-height: 1.32 !important; margin-bottom: clamp(6px, 1vh, 10px) !important; }
+  h4 { font-size: clamp(1.04rem, 4.2vw, 1.15rem) !important; margin-bottom: clamp(6px, 1vh, 8px) !important; }
+  h5 { font-size: clamp(0.95rem, 3.8vw, 1.04rem) !important; margin-bottom: clamp(4px, 0.8vh, 8px) !important; }
+  .stat-number { font-size: clamp(1.22rem, 5vw, 1.42rem) !important; }
+  .stat-label { font-size: clamp(0.74rem, 3vw, 0.82rem) !important; }
   
-  /* Fluid padding inside cards across mobile */
-  .product-card, .quality-card, .about-feature-card, .industry-card, .blog-card, .contact-form-card {
-    padding: clamp(14px, 4vw, 20px) !important;
+  p, .text-muted { font-size: clamp(0.84rem, 3.4vw, 0.91rem) !important; line-height: 1.55 !important; margin-bottom: clamp(8px, 1.2vh, 12px) !important; }
+  
+  /* Fluid compact padding inside cards across mobile */
+  .product-card, .quality-card, .about-feature-card, .industry-card, .blog-card, .contact-form-card, .infra-card {
+    padding: clamp(14px, 2vh, 18px) clamp(14px, 3.5vw, 18px) !important;
   }
   
   .accordion-button-custom {
-    padding: clamp(12px, 3.5vw, 16px) clamp(14px, 4vw, 18px) !important;
-    font-size: clamp(0.88rem, 3.6vw, 0.96rem) !important;
+    padding: clamp(12px, 1.8vh, 15px) clamp(14px, 3.5vw, 18px) !important;
+    font-size: clamp(0.88rem, 3.5vw, 0.95rem) !important;
   }
   .accordion-body-custom {
-    padding: 0 clamp(14px, 4vw, 18px) !important;
+    padding: 0 clamp(14px, 3.5vw, 18px) !important;
   }
   .accordion-item-custom.active .accordion-body-custom {
-    padding: 0 clamp(14px, 4vw, 18px) clamp(12px, 3.5vw, 16px) !important;
+    padding: 0 clamp(14px, 3.5vw, 18px) clamp(12px, 1.8vh, 15px) !important;
   }
+}
+
+/* 📱 Ultra-Compact Phones (`max-width: 480px`) & Landscape Short Viewports (`max-height: 650px`) */
+@media (max-width: 480px), (max-height: 650px) and (max-width: 991px) {
+  .section-padding,
+  .video-tour-section,
+  .why-choose-section,
+  .about-section,
+  .timeline-horizontal-section {
+    padding: clamp(26px, 4.5vh, 36px) 0 !important;
+  }
+  .stats-bar-section { padding: clamp(18px, 3vh, 24px) 0 !important; }
+  .cta-banner-section { padding: clamp(22px, 4vh, 30px) 0 !important; }
+  .main-footer { padding: clamp(24px, 4vh, 34px) 0 14px 0 !important; }
+  .text-center.max-w-700.mx-auto.mb-5,
+  .section-header.mb-5 { margin-bottom: clamp(14px, 2.5vh, 20px) !important; }
+  
+  .row.g-4, .row.g-5 {
+    --bs-gutter-y: clamp(12px, 1.8vh, 15px) !important;
+    --bs-gutter-x: clamp(12px, 3vw, 15px) !important;
+  }
+  
+  .product-card, .quality-card, .about-feature-card, .industry-card, .blog-card, .contact-form-card, .infra-card {
+    padding: clamp(12px, 1.8vh, 16px) clamp(12px, 3vw, 16px) !important;
+  }
+  
+  h2, .display-5 { font-size: clamp(1.22rem, 5.2vw, 1.45rem) !important; margin-bottom: 6px !important; }
+  h3, .display-6 { font-size: clamp(1.08rem, 4.5vw, 1.24rem) !important; margin-bottom: 6px !important; }
+  p, .text-muted { font-size: clamp(0.82rem, 3.2vw, 0.88rem) !important; margin-bottom: 8px !important; }
 }
 
 /* ==========================================================================

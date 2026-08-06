@@ -2808,7 +2808,6 @@ ul.footer-links li:not(.d-flex) a:hover::after {
    26. Bulletproof Dark Section Contrast & Text Colors (Fixes Dark Font on Dark Backgrounds)
    ========================================================================== */
 .main-footer,
-.cta-banner-section,
 .video-tour-section,
 .experience-badge,
 .btn-navy,
@@ -2818,7 +2817,6 @@ ul.footer-links li:not(.d-flex) a:hover::after {
 }
 
 .main-footer h1, .main-footer h2, .main-footer h3, .main-footer h4, .main-footer h5, .main-footer h6, .main-footer .footer-title,
-.cta-banner-section h1, .cta-banner-section h2, .cta-banner-section h3, .cta-banner-section h4, .cta-banner-section h5, .cta-banner-section h6,
 .video-tour-section h1, .video-tour-section h2, .video-tour-section h3, .video-tour-section h4, .video-tour-section h5, .video-tour-section h6,
 .experience-badge h1, .experience-badge h2, .experience-badge h3, .experience-badge h4, .experience-badge h5, .experience-badge h6,
 .bg-navy h1, .bg-navy h2, .bg-navy h3, .bg-navy h4, .bg-navy h5, .bg-navy h6 {
@@ -2826,14 +2824,13 @@ ul.footer-links li:not(.d-flex) a:hover::after {
 }
 
 .main-footer p, .main-footer span:not(.badge):not(.social-icon):not(.text-warning), .main-footer li, .main-footer .footer-links a, .main-footer .footer-desc, .main-footer .text-muted,
-.cta-banner-section p, .cta-banner-section span:not(.btn-amber):not(.badge), .cta-banner-section .text-muted,
 .video-tour-section p, .video-tour-section small, .video-tour-section span:not(.badge-amber):not(.badge), .video-tour-section .text-muted,
 .experience-badge p, .experience-badge .exp-text,
 .bg-navy p, .bg-navy span:not(.badge):not(.text-warning), .bg-navy li, .bg-navy .text-muted {
   color: #cbd5e1 !important;
 }
 
-.main-footer .text-warning, .cta-banner-section .text-warning, .video-tour-section .text-warning {
+.main-footer .text-warning, .video-tour-section .text-warning {
   color: #ffc107 !important;
 }
 

@@ -31,6 +31,7 @@
       <!-- Navigation (Center - Short & Merged with Dropdown) -->
       <nav class="d-none d-lg-flex align-items-center gap-2 main-desktop-nav" id="mainNav">
         <a href="#banner-fullscreen" class="nav-link-custom active">Home</a>
+        <a href="about.html" class="nav-link-custom">About Us</a>
         <a href="#products" class="nav-link-custom">Products</a>
         
         <!-- Merged Dropdown Menu -->
@@ -40,10 +41,6 @@
             <i class="bi bi-chevron-down ms-1 fs-xs"></i>
           </a>
           <div class="nav-dropdown-menu">
-            <a href="#about" class="dropdown-item-custom">
-              <i class="bi bi-building text-warning me-2"></i> About Us
-            </a>
-
             <a href="#quality" class="dropdown-item-custom">
               <i class="bi bi-shield-check text-success me-2"></i> Quality Standards
             </a>
@@ -118,7 +115,10 @@
     <div class="fs-slides-container" id="fsSliderContainer">
       
       <!-- Slide 1: Factory & Premier Manufacturer -->
-      <div class="fs-slide active" style="background-image: url('assets/images/factory_exterior.jpg');">
+      <div class="fs-slide active">
+        <video autoplay muted loop playsinline class="fs-slide-video">
+          <source src="assets/videos/hero_background.mp4" type="video/mp4">
+        </video>
         <div class="fs-slide-overlay"></div>
         <div class="container position-relative" style="z-index: 10 !important;">
           <div class="row align-items-center min-vh-100 py-5">
@@ -162,104 +162,8 @@
         </div>
       </div>
 
-      <!-- Slide 2: High-Speed Machinery & Looms -->
-      <div class="fs-slide" style="background-image: url('assets/images/weaving_machines.jpg');">
-        <div class="fs-slide-overlay"></div>
-        <div class="container position-relative" style="z-index: 10 !important;">
-          <div class="row align-items-center min-vh-100 py-5">
-            <div class="col-xl-8 col-lg-10 pt-5 pt-lg-0">
-              <div class="badge-amber mb-3">
-                <i class="bi bi-gear-wide-connected"></i> High-Speed Extrusion & Circular Looms
-              </div>
-              <h1 class="fs-slide-title text-white fw-bold mb-4">
-                State-of-the-Art Manufacturing Infrastructure
-              </h1>
-              <p class="fs-slide-subtitle text-light mb-5">
-                Over 1,50,000 sq. ft. of advanced production floor space operating 24/7 with high-speed Lohia and Starlinger lines, automated quality monitoring, and high-tensile tape weaving.
-              </p>
-              <div class="d-flex flex-wrap gap-3">
-                <a href="#quality" class="btn-amber">
-                  <span>View Quality Standards</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-                <a href="#" class="btn-cyan-outline trigger-quote" data-product="Fullscreen Slide 2 Inquiry">
-                  <i class="bi bi-telephone-fill"></i>
-                  <span>Consult Technical Team</span>
-                </a>
-              </div>
-              <!-- Highlights -->
-              <div class="d-flex flex-wrap align-items-center gap-3 mt-5 pt-3 border-top border-light-subtle">
-                <div class="fs-highlight-pill">
-                  <i class="bi bi-speedometer2 text-warning"></i>
-                  <span>High-Speed Circular Looms</span>
-                </div>
-                <div class="fs-highlight-pill">
-                  <i class="bi bi-shield-check text-success"></i>
-                  <span>100% Burst & Drop Tested</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3: BOPP Multicolor & Rotogravure -->
-      <div class="fs-slide" style="background-image: url('assets/images/bopp_multicolor_bags.jpg');">
-        <div class="fs-slide-overlay"></div>
-        <div class="container position-relative" style="z-index: 10 !important;">
-          <div class="row align-items-center min-vh-100 py-5">
-            <div class="col-xl-8 col-lg-10 pt-5 pt-lg-0">
-              <div class="badge-amber mb-3">
-                <i class="bi bi-palette-fill"></i> 8-Color HD Rotogravure Printing
-              </div>
-              <h1 class="fs-slide-title text-white fw-bold mb-4">
-                Brilliant BOPP Laminated Sacks & Custom Branding
-              </h1>
-              <p class="fs-slide-subtitle text-light mb-5">
-                Elevate your commodity shelf appeal with mirror-gloss or premium matte finishes, food-grade barrier protection, and custom dimensions tailored for flour, rice, seeds, and fertilizers.
-              </p>
-              <div class="d-flex flex-wrap gap-3">
-                <a href="#products" class="btn-amber">
-                  <span>Explore BOPP Bags</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-                <a href="#" class="btn-cyan-outline trigger-quote" data-product="Fullscreen Slide 3 Quote">
-                  <i class="bi bi-send-fill"></i>
-                  <span>Get Custom Sample Quote</span>
-                </a>
-              </div>
-              <!-- Highlights -->
-              <div class="d-flex flex-wrap align-items-center gap-3 mt-5 pt-3 border-top border-light-subtle">
-                <div class="fs-highlight-pill">
-                  <i class="bi bi-eye-fill text-warning"></i>
-                  <span>High-Gloss Mirror Appeal</span>
-                </div>
-                <div class="fs-highlight-pill">
-                  <i class="bi bi-award-fill text-info"></i>
-                  <span>Food-Grade Virgin Polymers</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
-
-    <!-- Navigation Arrows -->
-    <button class="fs-arrow fs-arrow-prev" id="fsPrevBtn" aria-label="Previous Slide">
-      <i class="bi bi-chevron-left"></i>
-    </button>
-    <button class="fs-arrow fs-arrow-next" id="fsNextBtn" aria-label="Next Slide">
-      <i class="bi bi-chevron-right"></i>
-    </button>
-
-    <!-- Indicators / Dots -->
-    <div class="fs-dots" id="fsDotsContainer">
-      <button class="fs-dot active" data-index="0" aria-label="Slide 1"></button>
-      <button class="fs-dot" data-index="1" aria-label="Slide 2"></button>
-      <button class="fs-dot" data-index="2" aria-label="Slide 3"></button>
-    </div>
+  </section>
 
 
   <!-- =========================================================================
@@ -313,18 +217,14 @@
       <div class="row align-items-center g-4 g-xl-5">
         
         <!-- Left: Large Factory Image + Floating Badge (4 Columns) -->
-        <div class="col-lg-5 col-xl-4">
+        <div class="col-lg-5 col-xl-5">
           <div class="about-img-box">
-            <img src="assets/images/factory_exterior.jpg" alt="Prime Packaging Factory Sardarshahar" class="about-img">
-            <div class="experience-badge">
-              <div class="exp-years">15+</div>
-              <div class="exp-text">Years of Excellence in Woven Sack Manufacturing</div>
-            </div>
+            <img src="assets/images/gallery_new_5.jpg" alt="Prime Packaging Factory Sardarshahar" class="about-img">
           </div>
         </div>
 
         <!-- Right: Company Introduction & Small Cards (8 Columns) -->
-        <div class="col-lg-7 col-xl-8">
+        <div class="col-lg-7 col-xl-7">
           <div class="badge-amber mb-3">
             <i class="bi bi-building"></i> About Our Factory
           </div>
@@ -332,13 +232,7 @@
             A Woven Bag Manufacturer Built Around One Idea — <span class="text-gradient-amber">Packaging Shouldn't Fail You</span>
           </h2>
           <p class="text-muted mb-4">
-            Good packaging is invisible when it works and very visible when it doesn't — torn bags, leaking fertilizer, faded print, rejected shipments. That's the problem we set out to solve when we started manufacturing PP woven bags in Sardarshahar, Churu.
-          </p>
-          <p class="text-muted mb-4">
-            Every bag that leaves our facility goes through the same process: raw material checks, controlled extrusion and weaving, lamination where required, printing, stitching, and a final inspection before packing. We don't skip steps to hit a lower price point, because a bag that splits open in transit costs our customers far more than a few rupees saved on cheaper material.
-          </p>
-          <p class="text-muted mb-4">
-            Today we manufacture PP woven bags, HDPE woven bags, BOPP laminated bags, food-grade sacks, leno mesh bags, jumbo bags (FIBC), and fully customized packaging for rice mills, flour mills, fertilizer companies, cement plants, chemical units, animal feed manufacturers, and exporters — across Rajasthan and the rest of India.
+            Prime Packaging is a trusted PP Woven Bags Manufacturer in Sardarshahar, Churu, Rajasthan, delivering durable and high-quality packaging solutions across India. We manufacture PP Woven Bags, HDPE Woven Bags, BOPP Laminated Bags, Food Grade Bags, Leno Mesh Bags, Jumbo Bags (FIBC), and Custom Printed Woven Bags. Every bag is produced using premium raw materials, advanced manufacturing technology, and strict quality checks to ensure strength, durability, and reliable performance for agriculture, food processing, fertilizers, cement, chemicals, animal feed, and industrial applications.
           </p>
 
           <!-- Small Cards Grid -->
@@ -1863,7 +1757,7 @@
         <div class="col-lg-3 col-md-6">
           <h5 class="footer-title text-white">Quick Links</h5>
           <ul class="footer-links">
-            <li><a href="#about">About Sardarshahar Factory</a></li>
+            <li><a href="about.html">About Sardarshahar Factory</a></li>
 
             <li><a href="#quality">Quality Assurance & Lab Testing</a></li>
             <li><a href="#gallery">Plant & Operations Gallery</a></li>

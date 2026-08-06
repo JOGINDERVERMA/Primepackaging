@@ -297,8 +297,9 @@ ul {
 }
 
 .brand-logo-img {
-  height: 54px;
+  height: 80px;
   width: auto;
+  border-radius: 10px;
   object-fit: contain;
   transition: transform 0.3s ease;
 }
@@ -561,6 +562,7 @@ ul {
 .fs-slide {
   grid-area: 1 / 1 / 2 / 2 !important;
   position: relative !important;
+  overflow: hidden !important;
   width: 100%;
   min-height: 100vh;
   min-height: 100dvh;
@@ -2557,7 +2559,7 @@ ul {
 .footer-logo-img {
   height: 60px;
   width: auto;
-  filter: brightness(0) invert(1);
+  border-radius: 10px;
 }
 
 .footer-desc {
@@ -2818,14 +2820,16 @@ ul.footer-links li:not(.d-flex) a:hover::after {
 .main-footer h1, .main-footer h2, .main-footer h3, .main-footer h4, .main-footer h5, .main-footer h6, .main-footer .footer-title,
 .cta-banner-section h1, .cta-banner-section h2, .cta-banner-section h3, .cta-banner-section h4, .cta-banner-section h5, .cta-banner-section h6,
 .video-tour-section h1, .video-tour-section h2, .video-tour-section h3, .video-tour-section h4, .video-tour-section h5, .video-tour-section h6,
-.experience-badge h1, .experience-badge h2, .experience-badge h3, .experience-badge h4, .experience-badge h5, .experience-badge h6 {
+.experience-badge h1, .experience-badge h2, .experience-badge h3, .experience-badge h4, .experience-badge h5, .experience-badge h6,
+.bg-navy h1, .bg-navy h2, .bg-navy h3, .bg-navy h4, .bg-navy h5, .bg-navy h6 {
   color: #ffffff !important;
 }
 
 .main-footer p, .main-footer span:not(.badge):not(.social-icon):not(.text-warning), .main-footer li, .main-footer .footer-links a, .main-footer .footer-desc, .main-footer .text-muted,
 .cta-banner-section p, .cta-banner-section span:not(.btn-amber):not(.badge), .cta-banner-section .text-muted,
 .video-tour-section p, .video-tour-section small, .video-tour-section span:not(.badge-amber):not(.badge), .video-tour-section .text-muted,
-.experience-badge p, .experience-badge .exp-text {
+.experience-badge p, .experience-badge .exp-text,
+.bg-navy p, .bg-navy span:not(.badge):not(.text-warning), .bg-navy li, .bg-navy .text-muted {
   color: #cbd5e1 !important;
 }
 
@@ -3284,4 +3288,19 @@ img:not(.brand-logo-img):not(.footer-logo-img):not(.partner-logo) {
   .floating-wa-tooltip {
     display: none;
   }
+}
+
+/* Background Video Styles for Hero Slider */
+.fs-slide-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  pointer-events: none;
 }

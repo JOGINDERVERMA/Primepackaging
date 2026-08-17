@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Prime Packaging - Sardarshahar</title>
+  <meta name="description"
+    content="Contact Prime Packaging for bulk orders of PP Woven Bags, BOPP Bags, and customized packaging solutions. Located in Sardarshahar, Churu, Rajasthan.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       1. TRANSPARENT HEADER / STICKY ON SCROLL
+       ========================================================================= -->
+  <header class="main-header">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <!-- Company Official Logo (Left) -->
+      <a href="index.html" class="navbar-brand-custom">
+        <img src="assets/images/logo.png" alt="Prime Packaging Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Navigation (Center - Short & Merged with Dropdown) -->
+      <nav class="d-none d-lg-flex align-items-center gap-2 main-desktop-nav" id="mainNav">
+        <a href="index.html" class="nav-link-custom">Home</a>
+        <a href="about.html" class="nav-link-custom">About Us</a>
+        <a href="products.html" class="nav-link-custom">Products</a>
+
+        <!-- Merged Dropdown Menu -->
+        <div class="nav-dropdown-group">
+          <a href="index.html#" class="nav-link-custom dropdown-toggle-custom" id="exploreDropdown">
+            <span>Explore</span>
+            <i class="bi bi-chevron-down ms-1 fs-xs"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html#quality" class="dropdown-item-custom">
+              <i class="bi bi-shield-check text-success me-2"></i> Quality Standards
+            </a>
+            <a href="index.html#gallery" class="dropdown-item-custom">
+              <i class="bi bi-images text-info me-2"></i> Facility Gallery
+            </a>
+            <a href="index.html#industries" class="dropdown-item-custom">
+              <i class="bi bi-boxes text-danger me-2"></i> Industries Served
+            </a>
+            <a href="index.html#why-choose" class="dropdown-item-custom">
+              <i class="bi bi-award text-warning me-2"></i> Why Choose Us
+            </a>
+            <a href="index.html#blog" class="dropdown-item-custom">
+              <i class="bi bi-newspaper text-secondary me-2"></i> Blog & Insights
+            </a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link-custom active">Contact</a>
+      </nav>
+
+      <!-- Call + WhatsApp + Get Quote Button + Mobile Hamburger (Right) -->
+      <div class="header-actions d-flex align-items-center gap-2">
+        <a href="tel:+917976169064" class="btn-header-call d-none d-sm-flex">
+          <i class="bi bi-telephone-fill"></i>
+          <span>+91 79761 69064</span>
+        </a>
+        <a href="https://wa.me/917976169064" target="_blank" class="btn-header-wa" title="Chat on WhatsApp">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="index.html#" class="btn-amber trigger-quote" data-product="General Inquiry">
+          <i class="bi bi-send-fill"></i>
+          <span class="d-none d-md-inline">Get Quote</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle d-lg-none border-0 bg-transparent p-1 text-navy" id="mobileMenuBtn"
+          aria-label="Toggle Navigation">
+          <i class="bi bi-list fs-1 text-navy"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <div class="mobile-drawer-header d-flex align-items-center justify-content-between p-3 border-bottom">
+        <img src="assets/images/logo.png" alt="Prime Packaging Logo" style="height: 38px;">
+        <button class="btn-close-mobile border-0 bg-transparent fs-3 text-navy" id="mobileMenuClose"
+          aria-label="Close Navigation">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <!-- Container where JS automatically injects the cloned menu from #mainNav -->
+      <div class="mobile-drawer-body p-3" id="mobileNavContent"></div>
+      <div class="mobile-drawer-footer p-3 border-top bg-light">
+        <div class="d-flex flex-column gap-2">
+          <a href="tel:+917976169064"
+            class="btn btn-navy w-100 d-flex align-items-center justify-content-center gap-2 py-2">
+            <i class="bi bi-telephone-fill"></i> Call +91 79761 69064
+          </a>
+          <a href="https://wa.me/917976169064" target="_blank"
+            class="btn btn-success w-100 d-flex align-items-center justify-content-center gap-2 py-2">
+            <i class="bi bi-whatsapp"></i> WhatsApp Chat
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- =========================================================================
+       PAGE HEADER BANNER
+       ========================================================================= -->
+  <section class="page-header position-relative overflow-hidden"
+    style="padding-top: 120px; min-height: 400px; display: flex; align-items: center;">
+    <div class="position-absolute top-0 start-0 w-100 h-100"
+      style="background-image: url('assets/images/factory_exterior.jpg'); background-size: cover; background-position: center; filter: brightness(0.35);">
+    </div>
+    <div class="container position-relative text-center text-white" style="z-index: 2;">
+      <div class="bg-warning text-dark fw-bold mb-3 d-inline-block px-4 py-2 rounded-pill shadow-sm"
+        style="font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;"><i
+          class="fa-solid fa-headset me-2"></i> 24/7 Support</div>
+      <h1 class="display-3 fw-bold mb-3" style="color: #ffffff !important; text-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        Get in Touch</h1>
+      <p class="lead text-light mb-0"
+        style="max-width: 800px; margin: 0 auto; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Request a quote, book a factory visit, or chat with our experts for customized packaging solutions.</p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CONTACT SECTION
+       ========================================================================= -->
+  <section class="section-padding bg-light">
+    <div class="container">
+      <div class="row g-5">
+        
+        <!-- Left: Contact Details & Map -->
+        <div class="col-lg-5">
+          <div class="mb-5">
+            <h2 class="fw-bold text-navy mb-4">Contact Information</h2>
+            
+            <div class="d-flex align-items-start mb-4 bg-white p-3 rounded-4 shadow-sm">
+              <div class="bg-warning text-navy rounded-circle d-flex justify-content-center align-items-center flex-shrink-0" style="width: 50px; height: 50px;">
+                <i class="fa-solid fa-location-dot fs-5"></i>
+              </div>
+              <div class="ms-3 mt-1">
+                <h5 class="fw-bold text-navy mb-1">Factory Address</h5>
+                <p class="text-muted small mb-0">Bikaner road, behind nayara petrol pump, Bandhanu Dikhnada, Sardarshahar, Rajasthan 331403</p>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start mb-4 bg-white p-3 rounded-4 shadow-sm">
+              <div class="bg-warning text-navy rounded-circle d-flex justify-content-center align-items-center flex-shrink-0" style="width: 50px; height: 50px;">
+                <i class="fa-solid fa-phone-volume fs-5"></i>
+              </div>
+              <div class="ms-3 mt-1">
+                <h5 class="fw-bold text-navy mb-1">Phone & WhatsApp</h5>
+                <p class="text-muted small mb-1">+91 79761 69064, +91 94137 27624, +91 76270 42388</p>
+                <a href="https://wa.me/917976169064" target="_blank" class="text-success fw-bold text-decoration-none small"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-start bg-white p-3 rounded-4 shadow-sm">
+              <div class="bg-warning text-navy rounded-circle d-flex justify-content-center align-items-center flex-shrink-0" style="width: 50px; height: 50px;">
+                <i class="fa-solid fa-envelope fs-5"></i>
+              </div>
+              <div class="ms-3 mt-1">
+                <h5 class="fw-bold text-navy mb-1">Email Us</h5>
+                <p class="text-muted small mb-0">sales@primepackaging.in<br>info@primepackaging.in</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="map-wrapper rounded-4 overflow-hidden shadow-sm" style="height: 350px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3511.608221318448!2d74.36254208980095!3d28.340455713493544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3914fb8096a6b17b%3A0x5bfcdaadd1ec117d!2sPrime%20Packaging!5e0!3m2!1sen!2sin!4v1786602485406!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="col-lg-7">
+          <div class="contact-form-card bg-white p-4 p-md-5 rounded-4 shadow-lg h-100 border border-light">
+            <div class="badge-amber mb-3">Send us a message</div>
+            <h3 class="fw-bold text-navy mb-4">Request a Customized Quote</h3>
+            
+            <form id="main-contact-form">
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="fw-semibold small text-muted mb-2">Your Full Name *</label>
+                    <input type="text" class="form-control-custom w-100" placeholder="John Doe" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="fw-semibold small text-muted mb-2">Company Name</label>
+                    <input type="text" class="form-control-custom w-100" placeholder="Prime Traders Ltd.">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="fw-semibold small text-muted mb-2">Mobile Number *</label>
+                    <input type="tel" class="form-control-custom w-100" placeholder="+91 99999 99999" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="fw-semibold small text-muted mb-2">Email Address</label>
+                    <input type="email" class="form-control-custom w-100" placeholder="sales@example.com">
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <div class="form-group">
+                    <label class="fw-semibold small text-muted mb-2">Product Category *</label>
+                    <select class="form-select form-control-custom w-100" required>
+                      <option value="" disabled selected>Select a product...</option>
+                      <option value="PP Woven Bags">PP Woven Bags & Sacks</option>
+                      <option value="BOPP Bags">BOPP Laminated Bags</option>
+                      <option value="HDPE Bags">HDPE Industrial Bags</option>
+                      <option value="Jumbo Bags">Jumbo Bags (FIBC)</option>
+                      <option value="Custom Packaging">Custom Printed Bags</option>
+                      <option value="Other">Other Inquiry</option>
+                    </select>
+                  </div>
+                </div>
+                
+                <div class="col-12">
+                  <div class="form-group">
+                    <label class="fw-semibold small text-muted mb-2">Your Requirements / Dimensions *</label>
+                    <textarea class="form-control-custom w-100" rows="5" placeholder="Please describe bag size, quantity required, and delivery location..." required></textarea>
+                  </div>
+                </div>
+                
+                <div class="col-12 pt-2">
+                  <button type="submit" class="btn-amber w-100 py-3 rounded-pill fs-5 d-flex align-items-center justify-content-center">
+                    Submit Inquiry <i class="bi bi-send-fill ms-2"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       23. FOOTER (FOUR-COLUMN PREMIUM FOOTER)
+       ========================================================================= -->
+  <footer class="main-footer mt-0">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Column 1: Company About -->
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-logo-box">
+            <img src="assets/images/logo.png" alt="Prime Packaging Official Logo" class="footer-logo-img">
+          </div>
+          <p class="footer-desc">
+            India's premier manufacturer and exporter of Polypropylene (PP) and High-Density Polyethylene (HDPE) woven
+            sacks and BOPP multicolor bags, located in Sardarshahar, Churu, Rajasthan.
+          </p>
+          <div class="footer-socials">
+            <a href="index.html#" class="social-icon" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="index.html#" class="social-icon" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="index.html#" class="social-icon" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/917976169064" class="social-icon" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Products Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title text-white">Product Range</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">PP Woven Sacks & Bags</a></li>
+            <li><a href="products.html">HDPE Industrial Bags</a></li>
+            <li><a href="products.html">BOPP Laminated Bags</a></li>
+            <li><a href="products.html">Basmati Rice Packaging</a></li>
+            <li><a href="products.html">Food Grade Flour & Sugar Bags</a></li>
+            <li><a href="products.html">AD-STAR Cement Valve Bags</a></li>
+            <li><a href="products.html">Custom Engineered Sacks</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title text-white">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Sardarshahar Factory</a></li>
+            <li><a href="index.html#quality">Quality Assurance & Lab Testing</a></li>
+            <li><a href="index.html#gallery">Plant & Operations Gallery</a></li>
+            <li><a href="index.html#industries">Industries We Serve</a></li>
+            <li><a href="contact.html">Request a Custom Quote</a></li>
+            <li><a href="contact.html">Factory Visit Appointment</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Details -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title text-white">Contact Info</h5>
+          <ul class="footer-links">
+            <li class="d-flex gap-2 text-muted mb-3">
+              <i class="bi bi-geo-alt text-warning mt-1"></i>
+              <span>Bikaner road, behind nayara petrol pump, Bandhanu Dikhnada, Sardarshahar, Rajasthan 331403</span>
+            </li>
+            <li class="d-flex gap-2 text-muted mb-3">
+              <i class="bi bi-telephone text-warning mt-1"></i>
+              <span>+91 79761 69064, 94137 27624, 76270 42388<br><span class="text-success fw-semibold"><i
+                    class="bi bi-whatsapp"></i> WA: 7976169064 / 7627042388</span></span>
+            </li>
+            <li class="d-flex gap-2 text-muted">
+              <i class="bi bi-envelope text-warning mt-1"></i>
+              <span>sales@primepackaging.in<br>info@primepackaging.in</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          <span>&copy; 2026 Prime Packaging (Woven Bag Factory). All Rights Reserved. Maintained by <a href="https://lkntecno.com" target="_blank" class="text-warning text-decoration-none">Lkn Technologies</a></span>
+        </div>
+        <div class="d-flex gap-4">
+          <a href="index.html#" class="text-muted">Privacy Policy</a>
+          <a href="index.html#" class="text-muted">Terms & Conditions</a>
+          <a href="index.html#" class="text-muted">Sitemap</a>
+        </div>
+        <div>
+          <span class="badge bg-dark border border-secondary text-warning px-3 py-2"><i
+              class="bi bi-heart-fill text-danger"></i> Proudly Manufactured in Sardarshahar, Rajasthan, India</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS & LIGHTBOX POPUPS
+       ========================================================================= -->
+
+  <!-- 1. Lightbox Image Modal -->
+  <div id="lightbox-modal" class="custom-modal">
+    <div class="custom-modal-content">
+      <button class="btn-close-modal"><i class="bi bi-x-lg"></i></button>
+      <img id="lightbox-img" src="" alt="Zoomed Photo" class="w-100 rounded mb-3"
+        style="max-height: 550px; object-fit: contain;">
+      <h4 id="lightbox-title" class="text-white fw-bold mb-2"></h4>
+      <p id="lightbox-desc" class="text-muted mb-0"></p>
+    </div>
+  </div>
+
+  <!-- 2. Quick Quote Modal -->
+  <div id="quote-modal" class="custom-modal">
+    <div class="custom-modal-content max-w-600">
+      <button class="btn-close-modal" id="close-quote-modal"><i class="bi bi-x-lg"></i></button>
+      <div class="badge-amber mb-2">Express Quotation</div>
+      <h3 id="quote-modal-title" class="fw-bold mb-3">Get Instant Factory Price</h3>
+      <p class="text-muted small mb-4">Fill out quick details for <strong class="text-warning"
+          id="quote-bag-type-text">Woven Packaging</strong> and receive direct call from Sardarshahar plant.</p>
+
+      <form id="modal-quote-form">
+        <div class="row g-3">
+          <div class="col-12">
+            <label class="text-muted small mb-1">Selected Product Category</label>
+            <input type="text" id="quote-bag-type" class="form-control-custom bg-dark text-warning fw-bold" readonly
+              value="PP Woven Bags">
+          </div>
+          <div class="col-md-6">
+            <label class="text-muted small mb-1">Your Name *</label>
+            <input type="text" class="form-control-custom" required placeholder="Full Name">
+          </div>
+          <div class="col-md-6">
+            <label class="text-muted small mb-1">Mobile / WhatsApp *</label>
+            <input type="tel" class="form-control-custom" required placeholder="+91 79761 XXXXX">
+          </div>
+          <div class="col-12">
+            <label class="text-muted small mb-1">Quantity Required & City</label>
+            <input type="text" class="form-control-custom" required
+              placeholder="e.g. 10,000 Bags delivery in Jaipur / Delhi">
+          </div>
+          <div class="col-12 mt-4">
+            <button type="submit" class="btn-amber w-100 justify-content-center py-3">Submit for Instant Quote <i
+                class="bi bi-send-fill"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. Toast Notification -->
+  <div id="toast-success" class="toast-custom">
+    <i class="bi bi-check-circle-fill fs-4 text-white"></i>
+    <div>
+      <h6 class="m-0 text-white fw-bold">Request Received!</h6>
+      <small id="toast-msg" class="text-light">Our factory team will contact you shortly.</small>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Chat Button (Bottom Right) -->
+  <a href="https://wa.me/917976169064?text=Hello%20Prime%20Packaging%2C%20I%20would%20like%20to%20inquire%20about%20your%20PP%2FBOPP%20Woven%20Bags."
+    target="_blank" class="floating-wa-btn" aria-label="Chat with us on WhatsApp" title="Chat on WhatsApp">
+    <div class="floating-wa-pulse"></div>
+    <i class="bi bi-whatsapp"></i>
+    <span class="floating-wa-tooltip">Need Help? Chat with us!</span>
+  </a>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>

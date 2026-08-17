@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Products | Prime Packaging - PP Woven & BOPP Bags</title>
+  <meta name="description"
+    content="Explore our extensive range of packaging solutions including PP Woven Bags, BOPP Laminated Sacks, HDPE Bags, and more by Prime Packaging.">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- FontAwesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =========================================================================
+       1. TRANSPARENT HEADER / STICKY ON SCROLL
+       ========================================================================= -->
+  <header class="main-header">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <!-- Company Official Logo (Left) -->
+      <a href="index.html" class="navbar-brand-custom">
+        <img src="assets/images/logo.png" alt="Prime Packaging Logo" class="brand-logo-img">
+      </a>
+
+      <!-- Navigation (Center - Short & Merged with Dropdown) -->
+      <nav class="d-none d-lg-flex align-items-center gap-2 main-desktop-nav" id="mainNav">
+        <a href="index.html" class="nav-link-custom">Home</a>
+        <a href="about.html" class="nav-link-custom">About Us</a>
+        <a href="products.html" class="nav-link-custom active">Products</a>
+
+        <!-- Merged Dropdown Menu -->
+        <div class="nav-dropdown-group">
+          <a href="index.html#" class="nav-link-custom dropdown-toggle-custom" id="exploreDropdown">
+            <span>Explore</span>
+            <i class="bi bi-chevron-down ms-1 fs-xs"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="index.html#quality" class="dropdown-item-custom">
+              <i class="bi bi-shield-check text-success me-2"></i> Quality Standards
+            </a>
+            <a href="index.html#gallery" class="dropdown-item-custom">
+              <i class="bi bi-images text-info me-2"></i> Facility Gallery
+            </a>
+            <a href="index.html#industries" class="dropdown-item-custom">
+              <i class="bi bi-boxes text-danger me-2"></i> Industries Served
+            </a>
+            <a href="index.html#why-choose" class="dropdown-item-custom">
+              <i class="bi bi-award text-warning me-2"></i> Why Choose Us
+            </a>
+            <a href="index.html#blog" class="dropdown-item-custom">
+              <i class="bi bi-newspaper text-secondary me-2"></i> Blog & Insights
+            </a>
+          </div>
+        </div>
+
+        <a href="contact.html" class="nav-link-custom">Contact</a>
+      </nav>
+
+      <!-- Call + WhatsApp + Get Quote Button + Mobile Hamburger (Right) -->
+      <div class="header-actions d-flex align-items-center gap-2">
+        <a href="tel:+917976169064" class="btn-header-call d-none d-sm-flex">
+          <i class="bi bi-telephone-fill"></i>
+          <span>+91 79761 69064</span>
+        </a>
+        <a href="https://wa.me/917976169064" target="_blank" class="btn-header-wa" title="Chat on WhatsApp">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+        <a href="index.html#" class="btn-amber trigger-quote" data-product="General Inquiry">
+          <i class="bi bi-send-fill"></i>
+          <span class="d-none d-md-inline">Get Quote</span>
+        </a>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button class="mobile-menu-toggle d-lg-none border-0 bg-transparent p-1 text-navy" id="mobileMenuBtn"
+          aria-label="Toggle Navigation">
+          <i class="bi bi-list fs-1 text-navy"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer">
+      <div class="mobile-drawer-header d-flex align-items-center justify-content-between p-3 border-bottom">
+        <img src="assets/images/logo.png" alt="Prime Packaging Logo" style="height: 38px;">
+        <button class="btn-close-mobile border-0 bg-transparent fs-3 text-navy" id="mobileMenuClose"
+          aria-label="Close Navigation">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <!-- Container where JS automatically injects the cloned menu from #mainNav -->
+      <div class="mobile-drawer-body p-3" id="mobileNavContent"></div>
+      <div class="mobile-drawer-footer p-3 border-top bg-light">
+        <div class="d-flex flex-column gap-2">
+          <a href="tel:+917976169064"
+            class="btn btn-navy w-100 d-flex align-items-center justify-content-center gap-2 py-2">
+            <i class="bi bi-telephone-fill"></i> Call +91 79761 69064
+          </a>
+          <a href="https://wa.me/917976169064" target="_blank"
+            class="btn btn-success w-100 d-flex align-items-center justify-content-center gap-2 py-2">
+            <i class="bi bi-whatsapp"></i> WhatsApp Chat
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- =========================================================================
+       PAGE HEADER BANNER
+       ========================================================================= -->
+  <section class="page-header position-relative overflow-hidden"
+    style="padding-top: 120px; min-height: 400px; display: flex; align-items: center;">
+    <div class="position-absolute top-0 start-0 w-100 h-100"
+      style="background-image: url('assets/images/bopp_multicolor_bags.jpg'); background-size: cover; background-position: center; filter: brightness(0.35);">
+    </div>
+    <div class="container position-relative text-center text-white" style="z-index: 2;">
+      <div class="bg-warning text-dark fw-bold mb-3 d-inline-block px-4 py-2 rounded-pill shadow-sm"
+        style="font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;"><i
+          class="fa-solid fa-boxes-stacked me-2"></i> Premium Packaging</div>
+      <h1 class="display-3 fw-bold mb-3" style="color: #ffffff !important; text-shadow: 0 4px 15px rgba(0,0,0,0.5);">
+        Our Products Range</h1>
+      <p class="lead text-light mb-0"
+        style="max-width: 800px; margin: 0 auto; text-shadow: 0 2px 10px rgba(0,0,0,0.5);">Engineered for Strength. Designed for Protection. Customized for Your Brand.</p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       PRODUCTS GRID SECTION
+       ========================================================================= -->
+  <section id="products-grid" class="section-padding bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <div class="badge-amber mb-3">Comprehensive Solutions</div>
+        <h2 class="display-5 fw-bold text-navy">Explore Our Woven Bags Range</h2>
+        <p class="text-muted mx-auto lead" style="max-width: 700px;">We manufacture a wide variety of PP/HDPE woven sacks and bags suitable for various industries including agriculture, food processing, chemicals, and construction.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Product 1 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden product-card hover-lift" style="transition: all 0.3s ease;">
+            <div class="position-relative">
+              <img src="assets/images/weaving_machines.jpg" class="card-img-top" alt="PP Woven Bags" style="height: 240px; object-fit: cover;">
+              <span class="position-absolute top-0 end-0 m-3 badge bg-navy p-2 shadow">Best Seller</span>
+            </div>
+            <div class="card-body p-4 text-center">
+              <h4 class="fw-bold text-navy mb-3">PP Woven Bags & Sacks</h4>
+              <p class="text-muted small mb-4">Highly durable and cost-effective packaging solutions. Ideal for packaging bulk commodities like sugar, flour, grains, and animal feed.</p>
+              <button class="btn btn-outline-navy rounded-pill px-4 trigger-quote" data-product="PP Woven Bags">Get Quote <i class="bi bi-arrow-right ms-2"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden product-card hover-lift" style="transition: all 0.3s ease;">
+            <div class="position-relative">
+              <img src="assets/images/bopp_multicolor_bags.jpg" class="card-img-top" alt="BOPP Laminated Bags" style="height: 240px; object-fit: cover;">
+              <span class="position-absolute top-0 end-0 m-3 badge bg-warning text-dark p-2 shadow">Premium</span>
+            </div>
+            <div class="card-body p-4 text-center">
+              <h4 class="fw-bold text-navy mb-3">BOPP Laminated Bags</h4>
+              <p class="text-muted small mb-4">Biaxially Oriented Polypropylene laminated bags with stunning multicolor photographic print quality for high retail visibility.</p>
+              <button class="btn btn-outline-navy rounded-pill px-4 trigger-quote" data-product="BOPP Laminated Bags">Get Quote <i class="bi bi-arrow-right ms-2"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden product-card hover-lift" style="transition: all 0.3s ease;">
+            <div class="position-relative">
+              <img src="assets/images/industrial_heavy_duty_bags.jpg" class="card-img-top" alt="HDPE Woven Bags" style="height: 240px; object-fit: cover;">
+            </div>
+            <div class="card-body p-4 text-center">
+              <h4 class="fw-bold text-navy mb-3">HDPE Industrial Bags</h4>
+              <p class="text-muted small mb-4">High-Density Polyethylene bags offering superior tensile strength, chemical resistance, and moisture protection for industrial use.</p>
+              <button class="btn btn-outline-navy rounded-pill px-4 trigger-quote" data-product="HDPE Industrial Bags">Get Quote <i class="bi bi-arrow-right ms-2"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden product-card hover-lift" style="transition: all 0.3s ease;">
+            <div class="position-relative">
+              <img src="assets/images/gallery_new_4.jpg" class="card-img-top" alt="Leno Mesh Bags" style="height: 240px; object-fit: cover;">
+            </div>
+            <div class="card-body p-4 text-center">
+              <h4 class="fw-bold text-navy mb-3">Leno Mesh Bags</h4>
+              <p class="text-muted small mb-4">Excellent breathability prevents moisture buildup. Perfect for packaging fresh produce like potatoes, onions, and vegetables.</p>
+              <button class="btn btn-outline-navy rounded-pill px-4 trigger-quote" data-product="Leno Mesh Bags">Get Quote <i class="bi bi-arrow-right ms-2"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 5 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden product-card hover-lift" style="transition: all 0.3s ease;">
+            <div class="position-relative">
+              <img src="assets/images/gallery_new_3.jpg" class="card-img-top" alt="Jumbo Bags (FIBC)" style="height: 240px; object-fit: cover;">
+            </div>
+            <div class="card-body p-4 text-center">
+              <h4 class="fw-bold text-navy mb-3">Jumbo Bags (FIBC)</h4>
+              <p class="text-muted small mb-4">Flexible Intermediate Bulk Containers designed for storing, transporting, and handling massive quantities of dry and flowable products.</p>
+              <button class="btn btn-outline-navy rounded-pill px-4 trigger-quote" data-product="Jumbo Bags (FIBC)">Get Quote <i class="bi bi-arrow-right ms-2"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 6 -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 border-0 shadow-sm rounded-4 overflow-hidden product-card hover-lift" style="transition: all 0.3s ease;">
+            <div class="position-relative">
+              <img src="assets/images/rotogravure_printing_lamination.jpg" class="card-img-top" alt="Custom Printed Bags" style="height: 240px; object-fit: cover;">
+              <span class="position-absolute top-0 end-0 m-3 badge bg-success p-2 shadow">Custom</span>
+            </div>
+            <div class="card-body p-4 text-center">
+              <h4 class="fw-bold text-navy mb-3">Custom Printed Bags</h4>
+              <p class="text-muted small mb-4">Enhance your brand identity with our custom flexo and rotogravure printing options, tailoring size, color, and design to your exact specs.</p>
+              <button class="btn btn-outline-navy rounded-pill px-4 trigger-quote" data-product="Custom Printed Bags">Get Quote <i class="bi bi-arrow-right ms-2"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       CTA SECTION
+       ========================================================================= -->
+  <section class="cta-banner-gold text-center section-padding"
+    style="background: linear-gradient(135deg, var(--primary), var(--primary-hover)); position: relative; overflow: hidden;">
+    
+    <!-- Decorative Background Elements -->
+    <div class="position-absolute rounded-circle" style="width: 400px; height: 400px; background: rgba(255,255,255,0.1); top: -100px; left: -100px; filter: blur(30px);"></div>
+    <div class="position-absolute rounded-circle" style="width: 300px; height: 300px; background: rgba(255,255,255,0.15); bottom: -50px; right: -50px; filter: blur(20px);"></div>
+    
+    <div class="container position-relative" style="z-index: 2;">
+      <span class="badge bg-white text-dark mb-3 px-4 py-2 rounded-pill fw-bold shadow-sm" style="letter-spacing: 1px; text-transform: uppercase; font-size: 0.85rem;"><i class="fa-solid fa-bolt text-warning me-2"></i> Fast & Reliable</span>
+      <h2 class="display-4 fw-bold text-navy mb-4" style="letter-spacing: -1px;">Ready to Upgrade Your Packaging?</h2>
+      <p class="lead text-navy mb-5 mx-auto" style="max-width: 750px; font-weight: 500; font-size: 1.25rem; opacity: 0.9;">
+        Join hundreds of businesses across India that trust Prime Packaging for durable, custom-printed, and high-performance woven bags. Let's build something great together.
+      </p>
+      <div class="d-flex flex-wrap justify-content-center gap-4 mt-2">
+        <a href="tel:+917976169064" class="btn btn-navy px-5 py-3 fw-bold shadow-lg fs-5 rounded-pill d-inline-flex align-items-center justify-content-center hover-lift" style="transition: all 0.3s ease;">
+          <i class="fa-solid fa-phone-volume me-2"></i> Call Now
+        </a>
+        <a href="https://wa.me/917976169064" class="btn btn-light text-success border-0 px-5 py-3 fw-bold shadow-lg fs-5 rounded-pill d-inline-flex align-items-center justify-content-center hover-lift" style="transition: all 0.3s ease;">
+          <i class="fa-brands fa-whatsapp fs-4 me-2"></i> WhatsApp Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Add extra hover utility just for this page */
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(8, 33, 72, 0.1) !important;
+    }
+  </style>
+
+  <!-- =========================================================================
+       23. FOOTER (FOUR-COLUMN PREMIUM FOOTER)
+       ========================================================================= -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="row g-5">
+
+        <!-- Column 1: Company About -->
+        <div class="col-lg-3 col-md-6">
+          <div class="footer-logo-box">
+            <img src="assets/images/logo.png" alt="Prime Packaging Official Logo" class="footer-logo-img">
+          </div>
+          <p class="footer-desc">
+            India's premier manufacturer and exporter of Polypropylene (PP) and High-Density Polyethylene (HDPE) woven
+            sacks and BOPP multicolor bags, located in Sardarshahar, Churu, Rajasthan.
+          </p>
+          <div class="footer-socials">
+            <a href="index.html#" class="social-icon" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="index.html#" class="social-icon" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="index.html#" class="social-icon" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/917976169064" class="social-icon" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Column 2: Products Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title text-white">Product Range</h5>
+          <ul class="footer-links">
+            <li><a href="products.html">PP Woven Sacks & Bags</a></li>
+            <li><a href="products.html">HDPE Industrial Bags</a></li>
+            <li><a href="products.html">BOPP Laminated Bags</a></li>
+            <li><a href="products.html">Basmati Rice Packaging</a></li>
+            <li><a href="products.html">Food Grade Flour & Sugar Bags</a></li>
+            <li><a href="products.html">AD-STAR Cement Valve Bags</a></li>
+            <li><a href="products.html">Custom Engineered Sacks</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Quick Links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title text-white">Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="about.html">About Sardarshahar Factory</a></li>
+            <li><a href="index.html#quality">Quality Assurance & Lab Testing</a></li>
+            <li><a href="index.html#gallery">Plant & Operations Gallery</a></li>
+            <li><a href="index.html#industries">Industries We Serve</a></li>
+            <li><a href="contact.html">Request a Custom Quote</a></li>
+            <li><a href="contact.html">Factory Visit Appointment</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact Details -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="footer-title text-white">Contact Info</h5>
+          <ul class="footer-links">
+            <li class="d-flex gap-2 text-muted mb-3">
+              <i class="bi bi-geo-alt text-warning mt-1"></i>
+              <span>Bikaner road, behind nayara petrol pump, Bandhanu Dikhnada, Sardarshahar, Rajasthan 331403</span>
+            </li>
+            <li class="d-flex gap-2 text-muted mb-3">
+              <i class="bi bi-telephone text-warning mt-1"></i>
+              <span>+91 79761 69064, 94137 27624, 76270 42388<br><span class="text-success fw-semibold"><i
+                    class="bi bi-whatsapp"></i> WA: 7976169064 / 7627042388</span></span>
+            </li>
+            <li class="d-flex gap-2 text-muted">
+              <i class="bi bi-envelope text-warning mt-1"></i>
+              <span>sales@primepackaging.in<br>info@primepackaging.in</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          <span>&copy; 2026 Prime Packaging (Woven Bag Factory). All Rights Reserved. Maintained by <a href="https://lkntecno.com" target="_blank" class="text-warning text-decoration-none">Lkn Technologies</a></span>
+        </div>
+        <div class="d-flex gap-4">
+          <a href="index.html#" class="text-muted">Privacy Policy</a>
+          <a href="index.html#" class="text-muted">Terms & Conditions</a>
+          <a href="index.html#" class="text-muted">Sitemap</a>
+        </div>
+        <div>
+          <span class="badge bg-dark border border-secondary text-warning px-3 py-2"><i
+              class="bi bi-heart-fill text-danger"></i> Proudly Manufactured in Sardarshahar, Rajasthan, India</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       MODALS & LIGHTBOX POPUPS
+       ========================================================================= -->
+
+  <!-- 1. Lightbox Image Modal -->
+  <div id="lightbox-modal" class="custom-modal">
+    <div class="custom-modal-content">
+      <button class="btn-close-modal"><i class="bi bi-x-lg"></i></button>
+      <img id="lightbox-img" src="" alt="Zoomed Photo" class="w-100 rounded mb-3"
+        style="max-height: 550px; object-fit: contain;">
+      <h4 id="lightbox-title" class="text-white fw-bold mb-2"></h4>
+      <p id="lightbox-desc" class="text-muted mb-0"></p>
+    </div>
+  </div>
+
+  <!-- 2. Quick Quote Modal -->
+  <div id="quote-modal" class="custom-modal">
+    <div class="custom-modal-content max-w-600">
+      <button class="btn-close-modal" id="close-quote-modal"><i class="bi bi-x-lg"></i></button>
+      <div class="badge-amber mb-2">Express Quotation</div>
+      <h3 id="quote-modal-title" class="fw-bold mb-3">Get Instant Factory Price</h3>
+      <p class="text-muted small mb-4">Fill out quick details for <strong class="text-warning"
+          id="quote-bag-type-text">Woven Packaging</strong> and receive direct call from Sardarshahar plant.</p>
+
+      <form id="modal-quote-form">
+        <div class="row g-3">
+          <div class="col-12">
+            <label class="text-muted small mb-1">Selected Product Category</label>
+            <input type="text" id="quote-bag-type" class="form-control-custom bg-dark text-warning fw-bold" readonly
+              value="PP Woven Bags">
+          </div>
+          <div class="col-md-6">
+            <label class="text-muted small mb-1">Your Name *</label>
+            <input type="text" class="form-control-custom" required placeholder="Full Name">
+          </div>
+          <div class="col-md-6">
+            <label class="text-muted small mb-1">Mobile / WhatsApp *</label>
+            <input type="tel" class="form-control-custom" required placeholder="+91 79761 XXXXX">
+          </div>
+          <div class="col-12">
+            <label class="text-muted small mb-1">Quantity Required & City</label>
+            <input type="text" class="form-control-custom" required
+              placeholder="e.g. 10,000 Bags delivery in Jaipur / Delhi">
+          </div>
+          <div class="col-12 mt-4">
+            <button type="submit" class="btn-amber w-100 justify-content-center py-3">Submit for Instant Quote <i
+                class="bi bi-send-fill"></i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. Toast Notification -->
+  <div id="toast-success" class="toast-custom">
+    <i class="bi bi-check-circle-fill fs-4 text-white"></i>
+    <div>
+      <h6 class="m-0 text-white fw-bold">Request Received!</h6>
+      <small id="toast-msg" class="text-light">Our factory team will contact you shortly.</small>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Chat Button (Bottom Right) -->
+  <a href="https://wa.me/917976169064?text=Hello%20Prime%20Packaging%2C%20I%20would%20like%20to%20inquire%20about%20your%20PP%2FBOPP%20Woven%20Bags."
+    target="_blank" class="floating-wa-btn" aria-label="Chat with us on WhatsApp" title="Chat on WhatsApp">
+    <div class="floating-wa-pulse"></div>
+    <i class="bi bi-whatsapp"></i>
+    <span class="floating-wa-tooltip">Need Help? Chat with us!</span>
+  </a>
+
+  <!-- Bootstrap 5 Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom Script -->
+  <script src="script.js"></script>
+</body>
+
+</html>
